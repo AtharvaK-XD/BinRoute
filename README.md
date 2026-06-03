@@ -23,7 +23,7 @@
 
 <br/>
 
-[![Watch Demo](https://img.shields.io/badge/▶%20Watch%20Demo-YouTube-FF0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=N4vcWH7ZHKA)
+[![BinRoute Demo](https://img.youtube.com/vi/N4vcWH7ZHKA/maxresdefault.jpg)](https://www.youtube.com/watch?v=N4vcWH7ZHKA)
 
 </div>
 
@@ -142,6 +142,29 @@ yarn dev
 
 ---
 
+## 👥 Team
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/AtharvaK-XD">
+        <img src="https://github.com/AtharvaK-XD.png" width="80px" style="border-radius:50%" alt="Atharva"/><br/>
+        <sub><b>Atharva Kulkarni</b></sub>
+      </a><br/>
+      <sub>Frontend</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/smitdighe">
+        <img src="https://github.com/smitdighe.png" width="80px" style="border-radius:50%" alt="Smit"/><br/>
+        <sub><b>Smit Dighe</b></sub>
+      </a><br/>
+      <sub>Backend</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 🔗 Links
 
 | Resource | Link |
@@ -153,6 +176,8 @@ yarn dev
 ---
 
 <div align="center">
+
+Made with 💚 by [Atharva Kulkarni](https://github.com/AtharvaK-XD) & [Smit Dighe](https://github.com/smitdighe)
 
 <sub>If you found this useful, give it a ⭐ on GitHub!</sub>
 
