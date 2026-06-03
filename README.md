@@ -6,7 +6,7 @@ BinRoute is a smart waste management dashboard for municipal fleet managers — 
 
 ---
 
-## 🚀 Live Demo:[bin-route.vercel.app](https://bin-route.vercel.app)  
+## 🚀 Live Demo: [bin-route.vercel.app](https://bin-route.vercel.app)  
 
 ---
 
