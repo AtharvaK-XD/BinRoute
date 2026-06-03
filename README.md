@@ -88,17 +88,6 @@ cd frontend
 yarn install
 yarn dev
 ```
-
-### 3. Environment Variables
-
-Create a `.env` file inside the `frontend/` folder:
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-VITE_API_URL=http://localhost:3000
-```
-
 ---
 
 ## 👥 Team
