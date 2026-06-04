@@ -1,13 +1,13 @@
 <div align="center">
 
-```
-      ██████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗   ██╗████████╗███████╗
-      ██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝██╔════╝
-      ██████╔╝██║██╔██╗ ██║██████╔╝██║   ██║██║   ██║   ██║   █████╗  
-      ██╔══██╗██║██║╚██╗██║██╔══██╗██║   ██║██║   ██║   ██║   ██╔══╝  
-      ██████╔╝██║██║ ╚████║██║  ██║╚██████╔╝╚██████╔╝   ██║   ███████╗
-      ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
-```
+<pre>
+██████╗ ██╗███╗   ██╗██████╗  ██████╗ ██╗   ██╗████████╗███████╗
+██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗██║   ██║╚══██╔══╝██╔════╝
+██████╔╝██║██╔██╗ ██║██████╔╝██║   ██║██║   ██║   ██║   █████╗  
+██╔══██╗██║██║╚██╗██║██╔══██╗██║   ██║██║   ██║   ██║   ██╔══╝  
+██████╔╝██║██║ ╚████║██║  ██║╚██████╔╝╚██████╔╝   ██║   ███████╗
+╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
+</pre>
 
 </div>
 
@@ -37,36 +37,37 @@
 
 <table>
   <tr>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>📊</h3>
-      <b>Dashboard</b><br/>
+      <b>Dashboard</b><br/><br/>
       <sub>Real-time overview of active routes, bins collected, fleet status, and daily stats</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>🗺️</h3>
-      <b>Map View</b><br/>
+      <b>Map View</b><br/><br/>
       <sub>Live map tracking of waste collection vehicles across all city zones</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>🛣️</h3>
-      <b>Routes Page</b><br/>
+      <b>Routes Page</b><br/><br/>
       <sub>View, manage, and optimize collection routes with one click</sub>
     </td>
   </tr>
+  <tr><td colspan="3"><br/></td></tr>
   <tr>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>📈</h3>
-      <b>Analytics</b><br/>
+      <b>Analytics</b><br/><br/>
       <sub>Charts and insights on collection efficiency, zone performance & fleet utilization</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>🔐</h3>
-      <b>Authentication</b><br/>
-      <sub>Secure login and user management powered by Supabase Auth</sub>
+      <b>Authentication</b><br/><br/>
+      <sub>Secure login and role-based access with Administrator, Operator and Viewer demo credentials</sub>
     </td>
-    <td align="center" width="200">
+    <td align="center" width="280">
       <h3>⚙️</h3>
-      <b>Settings</b><br/>
+      <b>Settings</b><br/><br/>
       <sub>User preferences and system-level configuration options</sub>
     </td>
   </tr>
@@ -82,7 +83,7 @@
 | 🎨 Styling | Tailwind CSS | Utility-first, responsive design system |
 | 🔀 Routing | React Router | Seamless client-side navigation |
 | 🗄️ Backend | Node.js + Express | Auth, database, and real-time subscriptions |
-| 🌐 State | Context API | Global auth and app state management |
+| 🌐 State | Mapbox GL + Chart.js | Global auth and app state management |
 
 ---
 
@@ -125,7 +126,7 @@ BinRoute/
 |   ├── middleware/
 │   │   └──errorHandler.js       # global error handling
 │   ├── index.js                 # entry point, app.listen()
-│   └── package-lock.json
+│   ├── package-lock.json
 │   └── package.json
 |
 ├── .gitignore
@@ -137,13 +138,15 @@ BinRoute/
 
 ## ⚙️ Getting Started
 
+> 💡 **Just exploring?** The frontend runs fully on mock data — you can skip the backend and Supabase setup entirely and still access all pages and features.
+
 ### Prerequisites
 
 Make sure you have the following installed:
 
 - ![Node](https://img.shields.io/badge/Node.js-v18+-339933?style=flat-square&logo=node.js&logoColor=white)
 - ![Yarn](https://img.shields.io/badge/Yarn-latest-2C8EBB?style=flat-square&logo=yarn&logoColor=white)
-- A [Supabase](https://supabase.com) account
+- A [Supabase](https://supabase.com) account with `bins`, `trucks`, and `stops` tables
 
 ### 1. Clone the Repository
 
@@ -152,7 +155,30 @@ git clone https://github.com/AtharvaK-XD/BinRoute.git
 cd BinRoute
 ```
 
-### 2. Install Dependencies & Run
+### 2. Setup Backend
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file inside the `backend/` folder:
+
+```env
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_KEY=your_supabase_anon_key
+PORT=4000
+```
+
+Then start the backend server:
+
+```bash
+npm run dev
+```
+
+> Backend will be running at `http://localhost:4000`
+
+### 3. Setup Frontend
 
 ```bash
 cd frontend
@@ -160,7 +186,17 @@ yarn install
 yarn dev
 ```
 
-> The app will be running at `http://localhost:5173`
+> Frontend will be running at `http://localhost:5000`
+
+> ⚠️ Both servers need to be running simultaneously for full functionality.
+
+### Demo Login Credentials
+
+| Username | Password | Role |
+|:---------|:---------|:-----|
+| admin | admin123 | Administrator |
+| operator | ops2026 | Operator |
+| viewer | view123 | Viewer |
 
 ---
 
