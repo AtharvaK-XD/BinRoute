@@ -9,6 +9,10 @@
 ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝ ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
 ```
 
+</div>
+
+<div align = "center">
+
 ### 🗑️ Smart routes. Less waste.
 
 **BinRoute** is a smart waste management dashboard for municipal fleet managers — built to optimize bin collection routes, monitor fleet activity, and reduce operational costs through real-time data and intelligent routing.
@@ -77,7 +81,7 @@
 | ⚛️ Framework | React + Vite | Core UI framework and lightning-fast bundler |
 | 🎨 Styling | Tailwind CSS | Utility-first, responsive design system |
 | 🔀 Routing | React Router | Seamless client-side navigation |
-| 🗄️ Backend | Supabase JS | Auth, database, and real-time subscriptions |
+| 🗄️ Backend | Node.js + Express | Auth, database, and real-time subscriptions |
 | 🌐 State | Context API | Global auth and app state management |
 
 ---
@@ -86,6 +90,7 @@
 
 ```
 BinRoute/
+|
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/              # Static assets (icons, images)
@@ -109,6 +114,23 @@ BinRoute/
 │   │   └── index.css
 │   ├── tailwind.config.js
 │   └── vite.config.js
+|
+├── backend/
+│   ├── routes/
+│   │   ├── bins.js              # GET /bins, POST /bins/:id/update
+│   │   ├── trucks.js            # GET /trucks
+│   │   └── optimize.js          # POST /optimize → returns routes
+│   ├── db/
+│   │   └── supabase.js          # supabase client setup
+|   ├── middleware/
+│   │   └──errorHandler.js       # global error handling
+│   ├── index.js                 # entry point, app.listen()
+│   └── package-lock.json
+│   └── package.json
+|
+├── .gitignore
+└── README.md
+
 ```
 
 ---
